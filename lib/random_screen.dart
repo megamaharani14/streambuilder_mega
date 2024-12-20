@@ -20,7 +20,7 @@ class _RandomScreenState extends State<RandomScreen> {
       ),
       body: Center(
         child: StreamBuilder<int>(
-          stream: _bloc.randomNumber, // Mengambil stream dari RandomBloc
+          stream: _bloc.randomNumber,
           initialData: 0,
           builder: (context, snapshot) {
             if (snapshot.hasError) {
@@ -34,7 +34,7 @@ class _RandomScreenState extends State<RandomScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => _bloc.generateRandom.add(null), // Memicu random number
+        onPressed: () => _bloc.generateRandom.add(null),
         child: const Icon(Icons.refresh),
       ),
     );

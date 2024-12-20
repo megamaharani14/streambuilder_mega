@@ -1,13 +1,13 @@
-import 'dart:async';
 import 'dart:math';
+import 'dart:async';
 
 class RandomNumberBloc{
-  final _generateRandomController = StreamController<void>();
-  final _randomNumberController = StreamController<int>();
+final _generateRandomController = StreamController<void>();
+final _randomNumberController = StreamController<int>();
 
-  Sink<void> get generateRandom =>_generateRandomController.sink;
-  Stream<int> get randomNumber => _randomNumberController.stream;
-  // _secondsStreamController.sink;
+Sink<void> get generateRandom =>_generateRandomController.sink;
+Stream<int> get randomNumber => _randomNumberController.stream;
+// _secondsStreamController.sink;
 
 RandomNumberBloc(){
   _generateRandomController.stream.listen((_){
